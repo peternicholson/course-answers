@@ -33,6 +33,8 @@ Library
                     -fno-warn-type-defaults
                     -fno-warn-name-shadowing
                     -fno-warn-unused-do-bind
+                    -fno-warn-unused-imports
+                    -fno-warn-unused-binds
 
   Hs-Source-Dirs:   src
 
