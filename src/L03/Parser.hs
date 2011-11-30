@@ -106,7 +106,7 @@ digit = satisfy isDigit
 --   * The input does not produce a value series of digits
 -- ~~~ Use the bindParser, valueParser, list and digit functions. ~~~
 natural :: Parser Int
-natural = bindParser (list digit) (\k -> case reads k of []    -> error "Failed to parse natural"
+natural = bindParser (list digit) (\k -> case reads k of []    -> failed "Failed to parse natural"
                                                          ((h,_):_) -> valueParser h)
 
 -- Exercise 10.4
